@@ -1,5 +1,17 @@
 # ducktrshessami.github.io
 
-Right now this is just here to test a favicon on my other GitHub Pages.
+A personal page and portfolio
+
+# Screenshots
+
+<details>
+
+<summary>Expand/Collapse</summary>
+
+
+
+</details>
 
 Deployment: [ducktrshessami.github.io](https://ducktrshessami.github.io/)
+
+Powered by [Materialize](https://materializecss.com/)
