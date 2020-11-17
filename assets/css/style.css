@@ -1,14 +1,40 @@
+header {
+    border-bottom: #7dff87 solid 5px;
+}
+
 nav {
     background-color: #383838;
 }
 
 nav > * {
-    margin-left: 1vw;
-    margin-right: 1vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
+}
+
+.brand {
+    font-weight: bolder;
 }
 
 .logo {
     background-color: #555555;
     height: 42px;
     vertical-align: middle;
+    margin-right: 0.6vw;
+}
+
+.sidenav {
+    background-color: #383838;
+}
+
+.sidenav * {
+    color: #ffffff!important;
+}
+
+.sidenav .disabled {
+    font-weight: bold;
+    color: #666666!important;
+}
+
+main {
+    background-image: url("./assets/images/");
 }
