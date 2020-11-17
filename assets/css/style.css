@@ -1,5 +1,9 @@
 .active {
-    font-weight: bolder;
+    font-weight: bolder!important;
+}
+
+.middle {
+    vertical-align: middle!important;
 }
 
 body {
@@ -7,14 +11,18 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
 }
 
 header {
     border-bottom: #7dff87 solid 5px;
 }
 
-nav {
-    background-color: #383838;
+nav, footer {
+    background-color: #383838!important;
 }
 
 nav > * {
@@ -25,12 +33,11 @@ nav > * {
 .logo {
     background-color: #555555;
     height: 42px;
-    vertical-align: middle;
     margin-right: 0.6vw;
 }
 
 .sidenav {
-    background-color: #383838;
+    background-color: #383838!important;
 }
 
 .sidenav * {
@@ -38,6 +45,17 @@ nav > * {
 }
 
 .sidenav .disabled {
-    font-weight: bold;
+    font-weight: bold!important;
     color: #666666!important;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+footer {
+    width: 100%;
+    padding: 20px;
+    border-top: #7dff87 solid 5px;
+    color: #aaaaaa;
 }
