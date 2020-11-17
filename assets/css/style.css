@@ -2,6 +2,13 @@
     font-weight: bolder;
 }
 
+body {
+    background-image: url("../images/background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
 header {
     border-bottom: #7dff87 solid 5px;
 }
@@ -33,8 +40,4 @@ nav > * {
 .sidenav .disabled {
     font-weight: bold;
     color: #666666!important;
-}
-
-main {
-    background-image: url("./assets/images/");
 }
