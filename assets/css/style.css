@@ -1,9 +1,14 @@
 nav {
-    background-color: #212121;
-    padding-left: 1vw;
+    background-color: #383838;
+}
+
+nav > * {
+    margin-left: 1vw;
+    margin-right: 1vw;
 }
 
 .logo {
-    background-color: #383838;
+    background-color: #555555;
     height: 42px;
+    vertical-align: middle;
 }
