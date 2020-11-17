@@ -19,6 +19,7 @@ body {
 
 header {
     border-bottom: #7dff87 solid 5px;
+    margin-bottom: 4vh;
 }
 
 nav, footer {
