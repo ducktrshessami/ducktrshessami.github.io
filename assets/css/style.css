@@ -6,6 +6,10 @@
     vertical-align: middle!important;
 }
 
+[role="button"] {
+    cursor: pointer;
+}
+
 body {
     background-image: url("../images/background.jpg");
     background-position: center;
