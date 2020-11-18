@@ -64,18 +64,6 @@ main {
     flex: 1 0 auto;
 }
 
-.horizontal-image {
-    width: 30%;
-    margin: auto;
-}
-
-.vertical-image {
-    min-width: 50%;
-    max-width: 100%;
-    display: block;
-    margin: auto;
-}
-
 footer {
     width: 100%;
     padding: 20px;
