@@ -49,13 +49,19 @@
                         <br>
                     </div>
                     <form id="contact-form">
-                        <label for="name">Name</label>
-                        <input id="name" name="name">
-                        <label for="email">E-Mail</label>
-                        <input name="email" id="email">
-                        <label for="message">Message</label>
-                        <input name="message" id="message">
-                        <button type="submit" form="contact-form" id="submit" class="btn waves-effect waves-light">Submit</button>
+                        <div class="input-field">
+                            <input type="text" id="name" name="name" class="validate white-text">
+                            <label for="name">Name</label>
+                        </div>
+                        <div class="input-field">
+                            <input type="text" name="email" id="email" class="validate white-text">
+                            <label for="email">E-Mail</label>
+                        </div>
+                        <div class="input-field">
+                            <textarea name="message" id="message" class="materialize-textarea validate white-text"></textarea>
+                            <label for="message">Message</label>
+                        </div>
+                        <button type="submit" form="contact-form" id="submit" class="btn waves-effect waves-dark black-text">Submit</button>
                     </form>
                 </div>
             </div>
