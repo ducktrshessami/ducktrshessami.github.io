@@ -8,7 +8,13 @@ A personal page and portfolio
 
 <summary>Expand/Collapse</summary>
 
+![Homepage](./assets/images/sc1.png)
 
+![Portfolio](./assets/images/sc2.png)
+
+![Contact](./assets/images/sc3.png)
+
+##### ~~But what is the point of putting screenshots for a portfolio?~~
 
 </details>
 
