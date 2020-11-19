@@ -37,6 +37,12 @@
             `,
             langs: ["js", "html", "css"],
             url: "https://github.com/ducktrshessami/work-day-scheduler"
+        },
+        {
+            title: "Facebook Unsponsored",
+            description: "A supplement for an adblocker on Facebook",
+            langs: ["js"],
+            url: "https://greasyfork.org/en/scripts/371822-facebook-unsponsored"
         }
     ];
     const langImgs = {
