@@ -2,10 +2,10 @@
     const listEl = $("#portfolio-list");
     const list = [
         {
-            title: "scdl",
+            title: "scdl-core",
             description: "A lightweight SoundCloud downloading module for Node.js",
             langs: ["js"],
-            url: "https://github.com/ducktrshessami/scdl"
+            url: "https://github.com/ducktrshessami/scdl-core"
         },
         {
             title: "Up Next",
