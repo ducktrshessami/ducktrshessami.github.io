@@ -8,6 +8,12 @@
             url: "https://github.com/ducktrshessami/scdl-core"
         },
         {
+            title: "scdl",
+            description: "A command line interface for scdl",
+            langs: ["js"],
+            url: "https://github.com/ducktrshessami/scdl"
+        },
+        {
             title: "Up Next",
             description: "A web application to locate local shows",
             langs: ["js", "html", "css"],
