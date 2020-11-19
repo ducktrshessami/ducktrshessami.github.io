@@ -1,6 +1,6 @@
 (function() { // Enclose scope
-    const listEl = $("#portfolio-list");
-    const list = [
+    const initialProjects = 6; // Number of projects displayed initially
+    const projectList = [ // Project data
         {
             title: "scdl-core",
             description: "A lightweight SoundCloud downloading module for Node.js",
@@ -45,13 +45,40 @@
             url: "https://greasyfork.org/en/scripts/371822-facebook-unsponsored"
         }
     ];
-    const langImgs = {
+    const langImgs = { // Language badge URLs
         js: "https://img.shields.io/badge/JavaScript-%23323330.svg?&style=flat-square&logo=javascript&logoColor=%23F7DF1E",
         html: "https://img.shields.io/badge/HTML5-%23E34F26.svg?&style=flat-square&logo=html5&logoColor=white",
         css: "https://img.shields.io/badge/CSS3-%231572B6.svg?&style=flat-square&logo=css3&logoColor=white"
     }
 
-    list.forEach(project => listEl.append(portfolioCard(project)));
+    const listEl = $("#portfolio-list");
+
+    /*
+    Initialize the page with portfolio items
+    */
+    function initPage() {
+        for (let i = 0; i < Math.min(projectList.length, initialProjects); i++) {
+            listEl.append(portfolioCard(projectList[i]));
+        }
+        if (projectList.length > initialProjects) { // If more than initial display
+            listEl.after(`
+                <div id="more-button-container" class="center">
+                    <button id="more-button" class="btn-large black-text">Show More</button>
+                </div>
+            `);
+            $("#more-button").click(showMore);
+        }
+    }
+
+    /*
+    Show the rest of the portfolio items and remove the button
+    */
+    function showMore() {
+        $("#more-button-container").remove();
+        for (let i = initialProjects; i < projectList.length; i++) {
+            listEl.append(portfolioCard(projectList[i]));
+        }
+    }
 
     /*
     Create a card given a portfolio item's information
@@ -71,7 +98,7 @@
         let parsedLangs = data.langs.map(lang => `<li class="lang"><img src="${langImgs[lang.trim()]}" alt="${lang.trim()}"></li>`).join('\n');
         return $(`
             <li class="portfolio-item">
-                <a href="${data.url}" class="portfolio-card card blue-grey darken-4 white-text waves-effect waves-light">
+                <a href="${data.url}" class="portfolio-card card blue-grey darken-4 white-text waves-effect waves-dark">
                     <div class="card-content">
                         <h3 class="card-title">${data.title}</h3>
                         <hr>
@@ -87,4 +114,6 @@
             </li>
         `);
     }
+
+    initPage();
 })();

@@ -1,6 +1,7 @@
 #portfolio-list {
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 2rem;
 }
 
 .portfolio-item {
@@ -21,9 +22,17 @@
     margin-top: 0.25rem;
 }
 
+#more-button {
+    background-color: #7dff87;
+}
+
+#more-button:hover {
+    background-color: #64CC6C;
+}
+
 /* Desktop */
 @media (min-width: 1200px) {
     .portfolio-item {
-        width: 32%!important;
+        width: 32%;
     }
 }
