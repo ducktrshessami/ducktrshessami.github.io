@@ -23,6 +23,16 @@
     list.forEach(project => listEl.append(portfolioCard(project)));
 
     /*
+    Create a card given a portfolio item's information
+
+    @param data: {
+        title: string,
+        description: string,
+        langs: Array<string>
+        url: string
+    }
+
+    @return a jQuery object containing the created element
     */
     function portfolioCard(data) {
         let parsedDesc = data.description.trim().split('\n').map(line => `<p>${line}</p>`).join("\n<br>\n");
