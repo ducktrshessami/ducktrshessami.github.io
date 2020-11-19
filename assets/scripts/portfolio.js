@@ -19,17 +19,17 @@
         html: "https://img.shields.io/badge/html5-%23E34F26.svg?&style=flat-square&logo=html5&logoColor=white",
         css: "https://img.shields.io/badge/css3-%231572B6.svg?&style=flat-square&logo=css3&logoColor=white"
     }
-    
+
     list.forEach(project => listEl.append(portfolioCard(project)));
-    
+
     /*
     */
     function portfolioCard(data) {
         let parsedDesc = data.description.trim().split('\n').map(line => `<p>${line}</p>`).join("\n<br>\n");
         let parsedLangs = data.langs.map(lang => `<li class="lang"><img src="${langImgs[lang]}" alt="${lang}"></li>`).join('\n');
         return $(`
-            <li class="portfolio-item card blue-grey darken-4 col s12 m6 l4">
-                <a href="${data.url}" class="white-text">
+            <li class="portfolio-item">
+                <a href="${data.url}" class="portfolio-card card blue-grey darken-4 white-text waves-effect waves-light">
                     <div class="card-content">
                         <h3 class="card-title">${data.title}</h3>
                         <hr>

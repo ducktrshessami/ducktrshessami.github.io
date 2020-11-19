@@ -5,7 +5,12 @@
 
 .portfolio-item {
     width: 99%;
-    margin: auto;
+    margin: 1rem auto 1rem auto;
+}
+
+.portfolio-card {
+    width: 100%;
+    height: 100%;
 }
 
 .project-langs {
@@ -16,16 +21,9 @@
     margin-top: 0.25rem;
 }
 
-/* Tablet */
-@media (min-width: 601px) {
+/* Desktop */
+@media (min-width: 1200px) {
     .portfolio-item {
-        width: 49%!important;
-    }
-
-    /* Desktop */
-    @media (min-width: 768px) {
-        .portfolio-item {
-            width: 32%!important;
-        }
+        width: 32%!important;
     }
 }
