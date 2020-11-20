@@ -10,7 +10,7 @@
         },
         {
             title: "scdl",
-            description: "A command line interface for scdl",
+            description: "A command line interface for scdl-core, a Node.js based SoundCloud downloading module",
             langs: ["js"],
             url: "https://github.com/ducktrshessami/scdl"
         },
@@ -44,6 +44,12 @@
             description: "A supplement for an adblocker on Facebook",
             langs: ["js"],
             url: "https://greasyfork.org/en/scripts/371822-facebook-unsponsored"
+        },
+        {
+            title: "YouTube Recommended Remover",
+            description: "Removes recommended videos from the related videos section",
+            langs: ["js"],
+            url: "https://greasyfork.org/en/scripts/372172-youtube-recommended-remover"
         }
     ];
     const langImgs = { // Language badge URLs
