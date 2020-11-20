@@ -1,5 +1,6 @@
 (function() { // Enclose scope
     const initialProjects = 6; // Number of projects displayed initially
+    const clickMeSeconds = 5; // Number of seconds the intial help message is shown
     const projectList = [ // Project data
         {
             title: "scdl-core",
@@ -83,7 +84,8 @@
                     <h5 class="hide-on-small-only">Click on an item to be taken to its repository!</h5>
                     <h5 class="hide-on-med-and-up">Tap on an item to be taken to its repository!</h5>
                 `,
-                classes: "blue-grey darken-3 text-white"
+                classes: "blue-grey darken-3 text-white",
+                displayLength: clickMeSeconds * 1000
             });
         }
     }
