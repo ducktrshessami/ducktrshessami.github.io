@@ -68,6 +68,24 @@
             `);
             $("#more-button").click(showMore);
         }
+        checkNewUser();
+    }
+
+    /*
+    Display a "Click me!" if user hasn't been here before
+    */
+    function checkNewUser() {
+        let check = localStorage.getItem("portfolioReturningUser");
+        if (!check) {
+            localStorage.setItem("portfolioReturningUser", true);
+            M.toast({
+                html: `
+                    <h5 class="hide-on-small-only">Click on an item to be taken to its repository!</h5>
+                    <h5 class="hide-on-med-and-up">Tap on an item to be taken to its repository!</h5>
+                `,
+                classes: "blue-grey darken-3 text-white"
+            });
+        }
     }
 
     /*
