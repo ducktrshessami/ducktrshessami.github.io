@@ -1,6 +1,6 @@
 # ducktrshessami.github.io
 
-A personal page and portfolio
+A personal page containing my information and a portfolio of my programming projects
 
 # Screenshots
 
