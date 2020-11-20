@@ -90,7 +90,7 @@
                     <h5 class="hide-on-small-only">Click on an item to be taken to its repository!</h5>
                     <h5 class="hide-on-med-and-up">Tap on an item to be taken to its repository!</h5>
                 `,
-                classes: "blue-grey darken-3 text-white",
+                classes: "blue-grey darken-2 text-white",
                 displayLength: clickMeSeconds * 1000
             });
         }
