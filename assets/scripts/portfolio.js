@@ -21,6 +21,12 @@
             url: "https://github.com/ducktrshessami/up-next"
         },
         {
+            title: "rm-init",
+            description: "A CLI program that generates a simple README.md based on information given\nPowered by Node.js",
+            langs: ["js"],
+            url: "https://github.com/ducktrshessami/rm-init"
+        },
+        {
             title: "Weather Dashboard",
             description: `
                 A centralized dashboard to keep track of multiple locations' weather conditions
