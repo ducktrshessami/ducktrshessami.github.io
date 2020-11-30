@@ -27,6 +27,12 @@
             url: "https://github.com/ducktrshessami/rm-init"
         },
         {
+            title: "buttsbot",
+            description: "A Discord bot based on the Twitch bot of the same name\nA fun bot that occasionally replaces a few syllables in a message with the word 'butt'",
+            langs: ["js"],
+            url: "https://github.com/ducktrshessami/buttsbot"
+        },
+        {
             title: "Weather Dashboard",
             description: `
                 A centralized dashboard to keep track of multiple locations' weather conditions
