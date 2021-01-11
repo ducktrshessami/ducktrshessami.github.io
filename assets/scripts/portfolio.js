@@ -33,6 +33,12 @@
             url: "https://github.com/ducktrshessami/buttsbot"
         },
         {
+            title: "Tasty Burgers!",
+            description: "A simple web app that tracks burgers a user wants to eat and has eaten",
+            langs: ["js", "html", "css"],
+            url: "https://github.com/ducktrshessami/tasty-burgers"
+        },
+        {
             title: "Weather Dashboard",
             description: `
                 A centralized dashboard to keep track of multiple locations' weather conditions
