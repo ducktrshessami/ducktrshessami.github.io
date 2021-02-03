@@ -21,6 +21,12 @@
             url: "https://github.com/ducktrshessami/up-next"
         },
         {
+            title: "Time Killer",
+            description: "Quick games to pass the time",
+            langs: ["js", "html", "css"],
+            url: "https://github.com/karlypaige/Project-2-Repository"
+        },
+        {
             title: "rm-init",
             description: "A CLI program that generates a simple README.md based on information given\nPowered by Node.js",
             langs: ["js"],
