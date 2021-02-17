@@ -5,5 +5,17 @@
     "start_url": "/",
     "lang": "en-US",
     "theme_color": "#7dff87",
-    "background_color": "#272727"
+    "background_color": "#272727",
+    "icons": [
+        {
+            "src": "/favicon.ico",
+            "sizes": "16x16 24x24 32x32 48x48 64x64 128x128",
+            "type": "image/ico"
+        },
+        {
+            "src": "/assets/images/logo.png",
+            "sizes": "800x800",
+            "type": "image/png"
+        }
+    ]
 }
