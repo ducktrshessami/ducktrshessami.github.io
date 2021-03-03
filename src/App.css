@@ -1,0 +1,32 @@
+.active {
+    font-weight: bolder!important;
+}
+
+.middle {
+    vertical-align: middle!important;
+}
+
+[role=button] {
+    cursor: pointer;
+}
+
+body {
+    background-image: url("./background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+a {
+    color: #76adff;
+}
+
+main {
+    flex: 1 0 auto;
+}

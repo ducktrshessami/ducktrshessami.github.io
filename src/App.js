@@ -10,6 +10,7 @@ import Contact from "./pages/Contact";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
+import "./App.css";
 import "materialize-css/dist/css/materialize.min.css";
 
 function App() {
