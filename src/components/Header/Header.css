@@ -1,0 +1,32 @@
+header {
+    border-bottom: #7dff87 solid 5px;
+    margin-bottom: 4vh;
+}
+
+nav {
+    background-color: #383838!important;
+}
+
+nav > * {
+    padding-left: 1vw;
+    padding-right: 1vw;
+}
+
+.logo {
+    background-color: #555555;
+    height: 42px;
+    margin-right: 0.6vw;
+}
+
+.sidenav {
+    background-color: #383838!important;
+}
+
+.sidenav * {
+    color: #ffffff!important;
+}
+
+.sidenav .disabled {
+    font-weight: bold!important;
+    color: #666666!important;
+}
