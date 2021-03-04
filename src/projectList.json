@@ -1,0 +1,100 @@
+[
+    {
+        "title": "scdl-core",
+        "description": "A lightweight SoundCloud downloading module for Node.js",
+        "langs": [
+            "js"
+        ],
+        "url": "https://github.com/ducktrshessami/scdl-core"
+    },
+    {
+        "title": "scdl",
+        "description": "A command line interface for scdl-core, a Node.js based SoundCloud downloading module",
+        "langs": [
+            "js"
+        ],
+        "url": "https://github.com/ducktrshessami/scdl"
+    },
+    {
+        "title": "Up Next",
+        "description": "A web application to locate local shows",
+        "langs": [
+            "js",
+            "html",
+            "css"
+        ],
+        "url": "https://github.com/ducktrshessami/up-next"
+    },
+    {
+        "title": "Time Killer",
+        "description": "Quick games to pass the time",
+        "langs": [
+            "js",
+            "html",
+            "css"
+        ],
+        "url": "https://github.com/karlypaige/Project-2-Repository"
+    },
+    {
+        "title": "rm-init",
+        "description": "A CLI program that generates a simple README.md based on information given\nPowered by Node.js",
+        "langs": [
+            "js"
+        ],
+        "url": "https://github.com/ducktrshessami/rm-init"
+    },
+    {
+        "title": "buttsbot",
+        "description": "A Discord bot based on the Twitch bot of the same name\nA fun bot that occasionally replaces a few syllables in a message with the word 'butt'",
+        "langs": [
+            "js"
+        ],
+        "url": "https://github.com/ducktrshessami/buttsbot"
+    },
+    {
+        "title": "Tasty Burgers!",
+        "description": "A simple web app that tracks burgers a user wants to eat and has eaten",
+        "langs": [
+            "js",
+            "html",
+            "css"
+        ],
+        "url": "https://github.com/ducktrshessami/tasty-burgers"
+    },
+    {
+        "title": "Weather Dashboard",
+        "description": "A centralized dashboard to keep track of multiple locations' weather conditions\nWeather condition data and icons by OpenWeather",
+        "langs": [
+            "js",
+            "html",
+            "css"
+        ],
+        "url": "https://github.com/ducktrshessami/weather-dashboard"
+    },
+    {
+        "title": "Work Day Scheduler",
+        "description": "A day planner for a single day's business hours.\nTime blocks are color-coded relative to the current time.\nNotes can be saved and stored locally.",
+        "langs": [
+            "js",
+            "html",
+            "css"
+        ],
+        "url": "https://github.com/ducktrshessami/work-day-scheduler"
+    },
+    {
+        "title": "Facebook Unsponsored",
+        "description": "A supplement for an adblocker on Facebook",
+        "langs": [
+            "js"
+        ],
+        "url": "https://greasyfork.org/en/scripts/371822-facebook-unsponsored"
+    },
+    {
+        "title": "YouTube Recommended Remover",
+        "description": "Removes recommended videos from the related videos section",
+        "langs": [
+            "js"
+        ],
+        "url": "https://greasyfork.org/en/scripts/372172-youtube-recommended-remover"
+    }
+]
