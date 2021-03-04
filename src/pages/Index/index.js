@@ -1,4 +1,9 @@
+const birthday = new Date("7/9/1998");
+
 export default function Index() {
+    let now = new Date();
+    let age = now.getFullYear() - birthday.getFullYear() - (birthday.getMonth() < now.getMonth() || (birthday.getMonth() === now.getMonth() && birthday.getDate() <= now.getDate()) ? 0 : 1);
+    
     return (
         <article className="row">
             <div className="col s12 m8 offset-m2 white-text">
@@ -10,7 +15,7 @@ export default function Index() {
                             <hr />
                             <br />
                             <p>Josh Wee (He/Him)</p>
-                            <p>Age: <span className="age-display"></span></p>
+                            <p>Age: {age}</p>
                             <br />
                             <p>I'm a self-taught computer programmer with a background in Javascript and C++. I mostly do back-end projects related to bots and automation, but occasionally I take requests for other projects. I am also on track to become a full-stack web developer.</p>
                             <br />
@@ -29,7 +34,7 @@ export default function Index() {
                     <img src="/logo512.png" alt="Logo" className="card-image vertical-image" />
                     <div className="card-content">
                         <p>Josh Wee (He/Him)</p>
-                        <p>Age: <span className="age-display"></span></p>
+                        <p>Age: {age}</p>
                         <br />
                         <p>I'm a self-taught computer programmer with a background in Javascript and C++. I mostly do back-end projects related to bots and automation, but occasionally I take requests for other projects. I am also on track to become a full-stack web developer.</p>
                         <br />
