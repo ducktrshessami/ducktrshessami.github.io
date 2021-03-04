@@ -1,9 +1,11 @@
+import "./Index.css";
+
 const birthday = new Date("7/9/1998");
 
 export default function Index() {
     let now = new Date();
     let age = now.getFullYear() - birthday.getFullYear() - (birthday.getMonth() < now.getMonth() || (birthday.getMonth() === now.getMonth() && birthday.getDate() <= now.getDate()) ? 0 : 1);
-    
+
     return (
         <article className="row">
             <div className="col s12 m8 offset-m2 white-text">
