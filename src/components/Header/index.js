@@ -8,6 +8,10 @@ import M from "materialize-css";
 import "./Header.css";
 
 export default class Header extends Component {
+    componentDidMount() {
+        M.Sidenav.init(document.getElementById("sidenav"), { edge: "right" });
+    }
+
     render() {
         return (
             <header>
@@ -24,7 +28,7 @@ export default class Header extends Component {
                     <a role="button" data-target="sidenav" className="sidenav-trigger right hide-on-med-and-up"><i className="material-icons">menu</i></a>
                 </nav>
                 <ul id="sidenav" className="sidenav">
-                    <li><Link className="disabled">About Me</Link></li>
+                    <li><Link className="disabled" to="/">About Me</Link></li>
                     <li><Link to="/portfolio">Portfolio</Link></li>
                     <li><Link to="/contact">Contact</Link></li>
                 </ul>
