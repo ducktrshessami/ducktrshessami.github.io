@@ -10,15 +10,13 @@
     cursor: pointer;
 }
 
-body {
+.App {
     background-image: url("./background.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-}
 
-.App {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
