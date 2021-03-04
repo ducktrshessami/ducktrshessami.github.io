@@ -9,6 +9,7 @@ import Portfolio from "./pages/Portfolio";
 import Contact from "./pages/Contact";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import projectList from "./projectList.json";
 
 import "./App.css";
 import "materialize-css/dist/css/materialize.min.css";
@@ -21,7 +22,7 @@ function App() {
         <main>
           <Switch>
             <Route path="/portfolio">
-              <Portfolio />
+              <Portfolio projects={projectList} />
             </Route>
             <Route path="/contact">
               <Contact />
