@@ -11,8 +11,14 @@ export default class Portfolio extends Component {
         all: this.props.projects
     }
 
-    componentDidMount() {
-
+    button() {
+        if (this.state.shown.length !== this.state.all.length) {
+            return (
+                <div id="more-button-container" class="center">
+                    <button id="more-button" class="btn-large black-text">Show More</button>
+                </div>
+            )
+        }
     }
 
     render() {
@@ -20,6 +26,7 @@ export default class Portfolio extends Component {
             <section class="row">
                 <div class="col s12 m8 offset-m2">
                     <ul id="portfolio-list">{this.state.shown.map(Project)}</ul>
+                    {this.button()}
                 </div>
             </section>
         );
