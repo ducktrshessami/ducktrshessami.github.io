@@ -1,4 +1,7 @@
+import M from "materialize-css";
 import "./Contact.css";
+
+const postToastDuration = 5;
 
 function getValues({ name, email, message }) {
     return {
@@ -12,11 +15,22 @@ function validate({ name, email, message }) {
     return name && /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(email) && message;
 }
 
+function clear() {
+    document.getElementById("name").value = "";
+    document.getElementById("email").value = "";
+    document.getElementById("message").value = "";
+}
+
 function submit(event) {
     let values = getValues(document.getElementById("contact-form"));
     event.preventDefault();
     if (validate(values)) {
-        // POST message
+        clear();
+        M.toast({
+            html: "<h5 class='hide-on-small-only'>Message posted!</h5>",
+            classes: "blue-grey darken-2 text-white",
+            displayLength: postToastDuration * 1000
+        });
     }
 }
 
@@ -36,7 +50,7 @@ export default function Contact() {
                             <label htmlFor="name">Name</label>
                         </div>
                         <div className="input-field">
-                            <input type="text" name="email" id="email" className="validate white-text" />
+                            <input type="email" name="email" id="email" className="validate white-text" />
                             <label htmlFor="email">E-Mail</label>
                         </div>
                         <div className="input-field">
