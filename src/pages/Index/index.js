@@ -19,9 +19,11 @@ export default function Index() {
                             <p>Josh Wee (He/Him)</p>
                             <p>Age: {age}</p>
                             <br />
-                            <p>I'm a self-taught computer programmer with a background in Javascript and C++. I mostly do back-end projects related to bots and automation, but occasionally I take requests for other projects. I am also on track to become a full-stack web developer.</p>
+                            <p>I'm a self-taught computer programmer with a background in Javascript and C++. I mostly do back-end projects related to bots and automation, but occasionally I take requests for other projects.</p>
                             <br />
-                            <p>Other than programming, I am also a pianist, fledgling writer, and image editor.</p>
+                            <p>I am also a full-stack web developer who has worked with React, MySql, and MongoDB.</p>
+                            <br />
+                            <p>Other than a programmer, I am a pianist, fledgling writer, and image editor.</p>
                         </div>
                         <ul className="card-content">
                             <li><a href="https://github.com/ducktrshessami">GitHub</a></li>
@@ -38,9 +40,11 @@ export default function Index() {
                         <p>Josh Wee (He/Him)</p>
                         <p>Age: {age}</p>
                         <br />
-                        <p>I'm a self-taught computer programmer with a background in Javascript and C++. I mostly do back-end projects related to bots and automation, but occasionally I take requests for other projects. I am also on track to become a full-stack web developer.</p>
+                        <p>I'm a self-taught computer programmer with a background in Javascript and C++. I mostly do back-end projects related to bots and automation, but occasionally I take requests for other projects.</p>
                         <br />
-                        <p>Other than programming, I am also a pianist, fledgling writer, and image editor.</p>
+                        <p>I am also a full-stack web developer who has worked with React, MySql, and MongoDB.</p>
+                        <br />
+                        <p>Other than a programmer, I am a pianist, fledgling writer, and image editor.</p>
                     </div>
                     <ul className="card-content">
                         <li><a href="https://github.com/ducktrshessami">GitHub</a></li>
