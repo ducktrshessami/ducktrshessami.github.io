@@ -30,6 +30,18 @@
     background-color: #64CC6C;
 }
 
+#all-button {
+    background-color: #76adff;
+}
+
+#all-button:hover {
+    background-color: #5e8acc;
+}
+
+.portfolio-button {
+    margin: 0 1vw 0 1vw;
+}
+
 /* Desktop */
 @media (min-width: 1200px) {
     .portfolio-item {

@@ -20,14 +20,18 @@ export default class Portfolio extends Component {
     }
     
     showAll() {
-
+        this.setState({
+            shown: this.state.projects.length,
+            projects: this.state.projects
+        });
     }
 
     buttons() {
         if (this.state.shown < this.state.projects.length) {
             return (
-                <div id="more-button-container" className="center">
-                    <button id="more-button" className="btn-large black-text" onClick={this.showMore}>Show More</button>
+                <div className="center">
+                    <button id="more-button" className="portfolio-button btn-large black-text" onClick={() => this.showMore()}>Show More</button>
+                    <button id="all-button" className="portfolio-button btn-large black-text" onClick={() => this.showAll()}>Show All</button>
                 </div>
             )
         }
