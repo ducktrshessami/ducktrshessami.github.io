@@ -39,15 +39,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "homepage": "https://ducktrshessami.github.io",
-  "description": "A personal page containing my information and a portfolio of my programming projects",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ducktrshessami/ducktrshessami.github.io.git"
-  },
-  "author": "ducktrshessami",
-  "bugs": {
-    "url": "https://github.com/ducktrshessami/ducktrshessami.github.io/issues"
   }
 }

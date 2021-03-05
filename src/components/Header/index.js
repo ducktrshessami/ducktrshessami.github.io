@@ -1,6 +1,5 @@
 import { Component } from "react";
 import {
-    Switch,
     Route,
     Link
 } from "react-router-dom";
@@ -19,19 +18,19 @@ export default class Header extends Component {
                 <nav className="nav-wrapper">
                     <Link to="/" className="left hide-on-small-only">
                         <img src="/logo192.png" alt="Logo" className="logo circle middle" />
-                        <span {...(this.props.route === "/" ? { className: "active"} : undefined)}>ducktrshessami</span>
+                        <span className="active">ducktrshessami</span>
                     </Link>
                     <ul className="left hide-on-small-only">
-                        <li><Link {...(this.props.route === "/" ? { className: "active"} : undefined)} to="/portfolio">Portfolio</Link></li>
-                        <li><Link {...(this.props.route === "/" ? { className: "active"} : undefined)} to="/contact">Contact</Link></li>
+                        <li><Link to="/portfolio">Portfolio</Link></li>
+                        <li><Link to="/contact">Contact</Link></li>
                     </ul>
                     <span className="brand-logo center hide-on-med-and-up">About Me</span>
                     <div role="button" data-target="sidenav" className="sidenav-trigger right hide-on-med-and-up"><i className="material-icons">menu</i></div>
                 </nav>
                 <ul id="sidenav" className="sidenav">
-                    <li><Link {...(this.props.route === "/" ? { className: "disabled"} : undefined)} to="/">About Me</Link></li>
-                    <li><Link {...(this.props.route === "/" ? { className: "disabled"} : undefined)} to="/portfolio">Portfolio</Link></li>
-                    <li><Link {...(this.props.route === "/" ? { className: "disabled"} : undefined)} to="/contact">Contact</Link></li>
+                    <li><Link className="disabled" to="/">About Me</Link></li>
+                    <li><Link to="/portfolio">Portfolio</Link></li>
+                    <li><Link to="/contact">Contact</Link></li>
                 </ul>
             </header>
         );
