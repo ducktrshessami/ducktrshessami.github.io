@@ -1,4 +1,5 @@
 import { Component } from "react";
+import M from "materialize-css";
 import Project from "../../components/Project";
 import "./Portfolio.css";
 
@@ -12,13 +13,27 @@ export default class Portfolio extends Component {
         projects: this.props.projects
     }
 
+    componentDidMount() {
+        if (!localStorage.getItem("portfolioReturningUser")) {
+            localStorage.setItem("portfolioReturningUser", true);
+            M.toast({
+                html: `
+                    <h5 class="hide-on-small-only">Click on an item to be taken to its repository!</h5>
+                    <h5 class="hide-on-med-and-up">Tap on an item to be taken to its repository!</h5>
+                `,
+                classes: "blue-grey darken-2 text-white",
+                displayLength: clickMeSeconds * 1000
+            });
+        }
+    }
+
     showMore() {
         this.setState({
             shown: this.state.shown + projectIncrement,
             projects: this.state.projects
         });
     }
-    
+
     showAll() {
         this.setState({
             shown: this.state.projects.length,
