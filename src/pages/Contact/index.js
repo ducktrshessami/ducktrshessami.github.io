@@ -1,7 +1,7 @@
 import M from "materialize-css";
 import "./Contact.css";
 
-const postToastDuration = 5;
+const postToastDuration = 3;
 
 function getValues({ name, email, message }) {
     return {
