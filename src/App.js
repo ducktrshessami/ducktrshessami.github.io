@@ -18,7 +18,17 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Header />
+        <Switch>
+          <Route path="/portfolio">
+            <Header route="/portfolio" />
+          </Route>
+          <Route path="/contact">
+            <Header route="/contact" />
+          </Route>
+          <Route path="/">
+            <Header route="/" />
+          </Route>
+        </Switch>
         <main>
           <Switch>
             <Route path="/portfolio">
