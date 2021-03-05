@@ -36,20 +36,20 @@
         "url": "https://github.com/karlypaige/Project-2-Repository"
     },
     {
-        "title": "rm-init",
-        "description": "A CLI program that generates a simple README.md based on information given\nPowered by Node.js",
-        "langs": [
-            "js"
-        ],
-        "url": "https://github.com/ducktrshessami/rm-init"
-    },
-    {
         "title": "buttsbot",
         "description": "A Discord bot based on the Twitch bot of the same name\nA fun bot that occasionally replaces a few syllables in a message with the word 'butt'",
         "langs": [
             "js"
         ],
         "url": "https://github.com/ducktrshessami/buttsbot"
+    },
+    {
+        "title": "gachabot",
+        "description": "A base for a discord.js powered gacha game bot",
+        "langs": [
+            "js",
+            "mysql"
+        ]
     },
     {
         "title": "Tasty Burgers!",
@@ -70,6 +70,14 @@
             "css"
         ],
         "url": "https://github.com/ducktrshessami/weather-dashboard"
+    },
+    {
+        "title": "rm-init",
+        "description": "A CLI program that generates a simple README.md based on information given\nPowered by Node.js",
+        "langs": [
+            "js"
+        ],
+        "url": "https://github.com/ducktrshessami/rm-init"
     },
     {
         "title": "Work Day Scheduler",
