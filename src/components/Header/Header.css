@@ -17,16 +17,3 @@ nav > * {
     height: 42px;
     margin-right: 0.6vw;
 }
-
-.sidenav {
-    background-color: #383838!important;
-}
-
-.sidenav * {
-    color: #ffffff!important;
-}
-
-.sidenav .disabled {
-    font-weight: bold!important;
-    color: #666666!important;
-}
