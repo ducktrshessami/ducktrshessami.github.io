@@ -9,7 +9,7 @@ const langImgs = {
 
 export default function Lang({ lang }) {
     return (
-        <li class="lang">
+        <li className="lang">
             <img src={langImgs[lang]} alt={lang} />
         </li>
     );
