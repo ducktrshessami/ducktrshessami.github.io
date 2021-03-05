@@ -25,7 +25,7 @@ export default class Header extends Component {
                         <li><Link to="/contact">Contact</Link></li>
                     </ul>
                     <span className="brand-logo center hide-on-med-and-up">About Me</span>
-                    <a role="button" data-target="sidenav" className="sidenav-trigger right hide-on-med-and-up"><i className="material-icons">menu</i></a>
+                    <div role="button" data-target="sidenav" className="sidenav-trigger right hide-on-med-and-up"><i className="material-icons">menu</i></div>
                 </nav>
                 <ul id="sidenav" className="sidenav">
                     <li><Link className="disabled" to="/">About Me</Link></li>
