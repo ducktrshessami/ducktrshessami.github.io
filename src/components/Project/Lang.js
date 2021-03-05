@@ -1,3 +1,5 @@
+import "./Lang.css";
+
 const langImgs = {
     js: "https://img.shields.io/badge/JavaScript-%23323330.svg?&style=flat-square&logo=javascript&logoColor=%23F7DF1E",
     html: "https://img.shields.io/badge/HTML5-%23E34F26.svg?&style=flat-square&logo=html5&logoColor=white",

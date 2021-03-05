@@ -1,0 +1,20 @@
+.portfolio-item {
+    width: 99%;
+    margin: 0.5rem auto 0.5rem auto;
+}
+
+.portfolio-card {
+    width: 100%;
+    height: 100%;
+}
+
+.project-langs {
+    margin-top: 1rem;
+}
+
+/* Desktop */
+@media (min-width: 1200px) {
+    .portfolio-item {
+        width: 32%;
+    }
+}

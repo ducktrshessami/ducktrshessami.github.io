@@ -1,4 +1,5 @@
 import Lang from "./Lang";
+import "./Project.css";
 
 export default function Project({ title, description, langs, url }) {
     let parsedDesc = description.trim().split('\n').map(line => `<p>${line.trim()}</p>`).join("\n<br>\n");
