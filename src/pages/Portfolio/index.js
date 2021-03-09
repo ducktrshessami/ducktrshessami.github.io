@@ -1,16 +1,23 @@
 import { Component } from "react";
 import M from "materialize-css";
 import Project from "../../components/Project";
+import getProjectList from "../../utils/getProjectList";
 import "./Portfolio.css";
 
 const initialProjects = 6; // Number of projects displayed initially
 const projectIncrement = 6; // Project display increase per button press
 const clickMeSeconds = 5; // Number of seconds the intial help message is shown
 
+const errorCard = {
+    title: "Error",
+    description: "Could not get project list",
+    langs: []
+};
+
 export default class Portfolio extends Component {
     state = {
         shown: initialProjects,
-        projects: this.props.projects
+        projects: []
     }
 
     componentDidMount() {
@@ -25,6 +32,15 @@ export default class Portfolio extends Component {
                 displayLength: clickMeSeconds * 1000
             });
         }
+        getProjectList()
+            .then(projects => this.setState({
+                shown: this.state.shown,
+                projects: projects
+            }))
+            .catch(() => this.setState({
+                shown: 1,
+                projects: [errorCard]
+            }))
     }
 
     showMore() {
