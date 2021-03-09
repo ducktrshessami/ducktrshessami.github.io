@@ -6,7 +6,11 @@ const gistEndpoint = "https://api.github.com/gists";
 export default function getProjectList() {
     return phin({
         url: gistEndpoint + "/" + gistID,
-        parse: "json"
+        parse: "json",
+        headers: {
+            "User-Agent": "ducktrshessami.github.io"
+        }
     })
-        .then(res => res.body);
+        .then(res => res.body.files["portfolio.json"].content)
+        .then(JSON.parse);
 };
