@@ -37,13 +37,10 @@ export default class Portfolio extends Component {
                 shown: this.state.shown,
                 projects: projects
             }))
-            .catch(err => {
-                console.error(err);
-                this.setState({
-                    shown: 1,
-                    projects: [errorCard]
-                });
-            });
+            .catch(() => this.setState({
+                shown: 1,
+                projects: [errorCard]
+            }))
     }
 
     showMore() {
