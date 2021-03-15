@@ -15,17 +15,12 @@ function validate({ name, email, message }) {
     return name && /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(email) && message;
 }
 
-function clear() {
-    document.getElementById("name").value = "";
-    document.getElementById("email").value = "";
-    document.getElementById("message").value = "";
-}
-
 function submit(event) {
-    let values = getValues(document.getElementById("contact-form"));
+    let form = document.getElementById("contact-form");
+    let values = getValues(form);
     event.preventDefault();
     if (validate(values)) {
-        clear();
+        form.reset();
         M.toast({
             html: "<h5 class='hide-on-small-only'>Message posted!</h5>",
             classes: "blue-grey darken-2 text-white",
