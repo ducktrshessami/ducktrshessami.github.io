@@ -1,4 +1,5 @@
 import M from "materialize-css";
+import postMessage from "../../utils/postMessage";
 import "./Contact.css";
 
 const postToastDuration = 3;
@@ -20,12 +21,16 @@ function submit(event) {
     let values = getValues(form);
     event.preventDefault();
     if (validate(values)) {
-        form.reset();
-        M.toast({
-            html: "<h5 class='hide-on-small-only'>Message posted!</h5>",
-            classes: "blue-grey darken-2 text-white",
-            displayLength: postToastDuration * 1000
-        });
+        postMessage(values)
+            .then(() => {
+                form.reset();
+                M.toast({
+                    html: "<h5 class='hide-on-small-only'>Message posted!</h5>",
+                    classes: "blue-grey darken-2 text-white",
+                    displayLength: postToastDuration * 1000
+                });
+            })
+            .catch(console.error);
     }
 }
 
