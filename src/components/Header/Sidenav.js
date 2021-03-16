@@ -19,8 +19,13 @@ export default function Sidenav() {
                     <li><Link to="/portfolio">Portfolio</Link></li>
                     <li><span className="disabled">Contact</span></li>
                 </Route>
-                <Route path="/">
+                <Route exact path="/">
                     <li><span className="disabled">About Me</span></li>
+                    <li><Link to="/portfolio">Portfolio</Link></li>
+                    <li><Link to="/contact">Contact</Link></li>
+                </Route>
+                <Route path="/">
+                    <li><Link to="/">About Me</Link></li>
                     <li><Link to="/portfolio">Portfolio</Link></li>
                     <li><Link to="/contact">Contact</Link></li>
                 </Route>
