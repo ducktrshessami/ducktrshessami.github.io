@@ -25,11 +25,11 @@ function App() {
           <Route path="/contact">
             <Header route="/contact" />
           </Route>
-          <Route exact path="/">
-            <Header route="/" />
+          <Route path="/messages">
+            <Header />
           </Route>
           <Route path="/">
-            <Header />
+            <Header route="/" />
           </Route>
         </Switch>
         <main>
