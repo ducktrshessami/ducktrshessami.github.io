@@ -1,7 +1,15 @@
 const endpoint = "https://ducktrshessami-portfolio-api.herokuapp.com/messages";
 const API = {
-    postNew
+    getAll,
+    postNew,
+    deleteById,
+    deleteAll
 };
+
+function getAll(key) {
+    return fetch(endpoint + `?key=${key}`)
+        .then(res => res.json());
+}
 
 function postNew(messageData) {
     return fetch(endpoint, {
@@ -9,6 +17,14 @@ function postNew(messageData) {
         body: JSON.stringify(messageData),
         headers: { "Content-Type": "application/json" }
     });
+}
+
+function deleteById(id, key) {
+    return fetch(endpoint + `/${id}?key=${key}`, { method: "delete" });
+}
+
+function deleteAll(key) {
+    return fetch(endpoint + `/all?key=${key}`, { method: "delete" });
 }
 
 export default API;
