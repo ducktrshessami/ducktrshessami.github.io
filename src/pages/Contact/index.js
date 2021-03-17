@@ -1,5 +1,5 @@
 import M from "materialize-css";
-import postMessage from "../../utils/postMessage";
+import API from "../../utils/API";
 import "./Contact.css";
 
 const postToastDuration = 3;
@@ -21,7 +21,7 @@ function submit(event) {
     let values = getValues(form);
     event.preventDefault();
     if (validate(values)) {
-        postMessage(values)
+        API.messages.postNew(values)
             .then(() => {
                 form.reset();
                 M.toast({

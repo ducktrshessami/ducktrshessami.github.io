@@ -1,7 +1,7 @@
 import { Component } from "react";
 import M from "materialize-css";
 import Project from "../../components/Project";
-import getProjectList from "../../utils/getProjectList";
+import API from "../../utils/API";
 import "./Portfolio.css";
 
 const initialProjects = 6; // Number of projects displayed initially
@@ -32,7 +32,7 @@ export default class Portfolio extends Component {
                 displayLength: clickMeSeconds * 1000
             });
         }
-        getProjectList()
+        API.projects.getAll()
             .then(projects => this.setState({
                 shown: this.state.shown,
                 projects: projects
