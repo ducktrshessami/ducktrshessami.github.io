@@ -10,7 +10,7 @@ function getAll() {
         .then(res => res.json());
 }
 
-function addOne(projectData) {
+function addOne(projectData, key) {
     return fetch(endpoint + `?key=${key}`, {
         method: "post",
         body: JSON.stringify(projectData),
