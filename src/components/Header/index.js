@@ -19,8 +19,7 @@ export default function Header({ route }) {
                     <Switch>
                         <Route path="/portfolio">Portfolio</Route>
                         <Route path="/contact">Contact</Route>
-                        <Route path="/messages">Messages</Route>
-                        <Route path="/">About Me</Route>
+                        <Route exact path="/">About Me</Route>
                     </Switch>
                 </span>
                 <div role="button" data-target="sidenav" className="sidenav-trigger right hide-on-med-and-up"><i className="material-icons">menu</i></div>
