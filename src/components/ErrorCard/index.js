@@ -1,3 +1,5 @@
+import "./ErrorCard.css";
+
 function parseMessage(description) {
     let elems = [], lines = description.trim().split("\n");
     for (let i = 0; i < lines.length; i++) {
@@ -9,7 +11,7 @@ function parseMessage(description) {
 
 export default function ErrorCard({ message }) {
     return (
-        <div className="card blue-grey darken-4 white-text waves-effect waves-dark">
+        <div className="card blue-grey darken-4 white-text waves-effect waves-dark error-card">
             <div className="card-content">
                 <h3 className="card-title">Error</h3>
                 <hr />
