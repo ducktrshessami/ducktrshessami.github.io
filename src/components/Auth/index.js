@@ -15,7 +15,7 @@ export default function Auth({ onSubmit }) {
                         <input type="text" id="password" name="password" className="validate white-text" />
                         <label htmlFor="password">Password</label>
                     </div>
-                    <button type="submit" form="contact-form" className="btn waves-effect waves-dark black-text submit-button">Get Messages</button>
+                    <button type="submit" form="contact-form" className="btn waves-effect waves-dark black-text submit-button">Authorize</button>
                 </form>
             </div>
         </div>
