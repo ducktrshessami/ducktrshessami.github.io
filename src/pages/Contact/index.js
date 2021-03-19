@@ -58,7 +58,7 @@ export default function Contact() {
                                 <textarea name="message" id="message" className="materialize-textarea validate white-text"></textarea>
                                 <label htmlFor="message">Message</label>
                             </div>
-                            <button type="submit" form="contact-form" id="submit" className="btn waves-effect waves-dark black-text" onClick={submit}>Submit</button>
+                            <button type="submit" form="contact-form" id="submit" className="btn waves-effect waves-dark black-text submit-button" onClick={submit}>Submit</button>
                         </form>
                     </div>
                 </div>
