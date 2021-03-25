@@ -21,7 +21,7 @@ function submit(event) {
     let values = getValues(form);
     event.preventDefault();
     if (validate(values)) {
-        API.messages.postNew(values)
+        API.sendMessage(values)
             .then(() => {
                 form.reset();
                 M.toast({
