@@ -17,7 +17,8 @@ const errorCard = {
 export default class Portfolio extends Component {
     state = {
         shown: initialProjects,
-        projects: []
+        projects: [],
+        langImages: {}
     }
 
     componentDidMount() {
@@ -32,7 +33,13 @@ export default class Portfolio extends Component {
                 displayLength: clickMeSeconds * 1000
             });
         }
-        API.projects.getAll()
+        API.getLangs()
+            .then(langs => this.setState({
+                ...this.state,
+                langImages: langs
+            }))
+            .catch(console.error);
+        API.getProjects()
             .then(projects => this.setState({
                 shown: this.state.shown,
                 projects: projects
@@ -78,7 +85,7 @@ export default class Portfolio extends Component {
                     <ul id="portfolio-list">
                         {this.state.projects
                             .slice(0, this.state.shown)
-                            .map(project => <Project key={project.title} {...project} />)
+                            .map(project => <Project key={project.title} {...project} langImages={this.state.langImages} />)
                         }
                     </ul>
                     {this.buttons()}
