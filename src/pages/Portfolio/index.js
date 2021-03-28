@@ -11,7 +11,8 @@ const clickMeSeconds = 5; // Number of seconds the intial help message is shown
 const errorCard = {
     title: "Error",
     description: "Could not get project list",
-    langs: []
+    langs: [],
+    loading: true
 };
 
 export default class Portfolio extends Component {
@@ -41,8 +42,10 @@ export default class Portfolio extends Component {
             .catch(console.error);
         API.getProjects()
             .then(projects => this.setState({
+                ...this.state,
                 shown: this.state.shown,
-                projects: projects
+                projects: projects,
+                loading: false
             }))
             .catch(err => {
                 console.error(err);
