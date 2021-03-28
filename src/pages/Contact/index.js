@@ -1,5 +1,6 @@
 import M from "materialize-css";
 import { useState } from "react";
+import Loading from "../../components/Loading";
 import API from "../../utils/API";
 import "./Contact.css";
 
@@ -72,7 +73,12 @@ export default function Contact() {
                                 <textarea name="message" id="message" className="materialize-textarea validate white-text"></textarea>
                                 <label htmlFor="message">Message</label>
                             </div>
-                            <button type="submit" form="contact-form" id="submit" className="btn waves-effect waves-dark black-text submit-button" onClick={submit}>Submit</button>
+                            <div className="row">
+                                <div className="row col s12 m6">
+                                    <button type="submit" form="contact-form" id="submit" className="btn waves-effect waves-dark black-text submit-button col" onClick={submit}>Submit</button>
+                                    {loading ? <Loading size="small" className="col" /> : undefined}
+                                </div>
+                            </div>
                         </form>
                     </div>
                 </div>
