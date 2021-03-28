@@ -1,5 +1,6 @@
 import { Component } from "react";
 import M from "materialize-css";
+import Loading from "../../components/Loading";
 import Project from "../../components/Project";
 import API from "../../utils/API";
 import "./Portfolio.css";
@@ -18,7 +19,8 @@ export default class Portfolio extends Component {
     state = {
         shown: initialProjects,
         projects: [],
-        langImages: {}
+        langImages: {},
+        loading: true
     }
 
     componentDidMount() {
@@ -41,8 +43,10 @@ export default class Portfolio extends Component {
             .catch(console.error);
         API.getProjects()
             .then(projects => this.setState({
+                ...this.state,
                 shown: this.state.shown,
-                projects: projects
+                projects: projects,
+                loading: false
             }))
             .catch(err => {
                 console.error(err);
@@ -83,6 +87,7 @@ export default class Portfolio extends Component {
             <section className="row">
                 <div className="col s12 m8 offset-m2">
                     <ul id="portfolio-list">
+                        {this.state.loading ? <Loading size="big" /> : undefined}
                         {this.state.projects
                             .slice(0, this.state.shown)
                             .map(project => <Project key={project.title} {...project} langImages={this.state.langImages} />)

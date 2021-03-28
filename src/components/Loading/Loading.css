@@ -1,6 +1,10 @@
-.loading {
-    margin-top: 5rem;
-    margin-left: 42%;
+.loading-big {
+    margin: 5rem auto 5rem auto;
+}
+
+.loading-small {
+    margin-top: 0.5rem;
+    margin-left: 1vw;
 }
 
 .mint-loading {

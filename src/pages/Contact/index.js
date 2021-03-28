@@ -1,4 +1,6 @@
 import M from "materialize-css";
+import { useState } from "react";
+import Loading from "../../components/Loading";
 import API from "../../utils/API";
 import "./Contact.css";
 
@@ -24,26 +26,30 @@ function validate({ name, email, message }) {
     return name && /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(email) && message;
 }
 
-function submit(event) {
-    let form = document.getElementById("contact-form");
-    let values = getValues(form);
-    event.preventDefault();
-    if (validate(values)) {
-        API.sendMessage(values)
-            .then(res => {
-                if (res.ok) {
-                    form.reset();
-                    M.toast(toastMessage("Message posted!"));
-                }
-                else {
-                    M.toast(toastMessage("Could not post message"));
-                }
-            })
-            .catch(console.error);
-    }
-}
-
 export default function Contact() {
+    const [loading, setLoading] = useState(false);
+
+    function submit(event) {
+        let form = document.getElementById("contact-form");
+        let values = getValues(form);
+        event.preventDefault();
+        if (validate(values)) {
+            setLoading(true);
+            API.sendMessage(values)
+                .then(res => {
+                    setLoading(false);
+                    if (res.ok) {
+                        form.reset();
+                        M.toast(toastMessage("Message posted!"));
+                    }
+                    else {
+                        M.toast(toastMessage("Could not post message"));
+                    }
+                })
+                .catch(console.error);
+        }
+    }
+
     return (
         <section className="row">
             <div className="col s12 m8 offset-m2 l6 offset-l3">
@@ -67,7 +73,12 @@ export default function Contact() {
                                 <textarea name="message" id="message" className="materialize-textarea validate white-text"></textarea>
                                 <label htmlFor="message">Message</label>
                             </div>
-                            <button type="submit" form="contact-form" id="submit" className="btn waves-effect waves-dark black-text submit-button" onClick={submit}>Submit</button>
+                            <div className="row">
+                                <div className="row col s12 m6">
+                                    <button type="submit" form="contact-form" id="submit" className="btn waves-effect waves-dark black-text submit-button col" onClick={submit}>Submit</button>
+                                    {loading ? <Loading size="small" className="col" /> : undefined}
+                                </div>
+                            </div>
                         </form>
                     </div>
                 </div>
