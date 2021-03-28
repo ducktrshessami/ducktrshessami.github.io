@@ -87,7 +87,7 @@ export default class Portfolio extends Component {
             <section className="row">
                 <div className="col s12 m8 offset-m2">
                     <ul id="portfolio-list">
-                        {this.state.loading ? <Loading /> : undefined}
+                        {this.state.loading ? <Loading size="big" /> : undefined}
                         {this.state.projects
                             .slice(0, this.state.shown)
                             .map(project => <Project key={project.title} {...project} langImages={this.state.langImages} />)
