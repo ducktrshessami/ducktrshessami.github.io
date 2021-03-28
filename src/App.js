@@ -7,7 +7,6 @@ import {
 import Index from "./pages/Index";
 import Portfolio from "./pages/Portfolio";
 import Contact from "./pages/Contact";
-import Messages from "./pages/Messages";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
@@ -25,9 +24,6 @@ function App() {
           <Route path="/contact">
             <Header route="/contact" />
           </Route>
-          <Route path="/messages">
-            <Header />
-          </Route>
           <Route path="/">
             <Header route="/" />
           </Route>
@@ -39,9 +35,6 @@ function App() {
             </Route>
             <Route path="/contact">
               <Contact />
-            </Route>
-            <Route path="/messages">
-              <Messages />
             </Route>
             <Route path="/">
               <Index />
