@@ -8,7 +8,7 @@ export default function Header({ route }) {
         <header>
             <nav className="nav-wrapper">
                 <Link to="/" className="left hide-on-small-only">
-                    <img src="/logo192.png" alt="Logo" className="logo circle middle" />
+                    <img src={process.env.PUBLIC_URL + "/logo192.png"} alt="Logo" className="logo circle middle" />
                     <span {...(route === "/" ? { className: "active" } : undefined)}>ducktrshessami</span>
                 </Link>
                 <ul className="left hide-on-small-only">
