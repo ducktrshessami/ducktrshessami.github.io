@@ -7,6 +7,14 @@ const API = {
             body: JSON.stringify(messageData),
             headers: { "Content-Type": "application/json" }
         });
+    },
+    getLangs: function () {
+        return fetch(URL + "/langs")
+            .then(res => res.json());
+    },
+    getProjects: function () {
+        return fetch(URL + "/projects")
+            .then(res => res.json());
     }
 };
 
