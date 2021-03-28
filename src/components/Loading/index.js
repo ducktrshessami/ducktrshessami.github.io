@@ -1,9 +1,9 @@
 import "./Loading.css";
 
-export default function Loading() {
+export default function Loading({ size, className }) {
     return (
-        <div className="loading">
-            <div className="preloader-wrapper big active">
+        <div className={`loading-${size} ${className}`}>
+            <div className={`preloader-wrapper ${size} active`}>
                 <div className="spinner-layer mint-loading">
                     <div className="circle-clipper left">
                         <div className="circle"></div>
