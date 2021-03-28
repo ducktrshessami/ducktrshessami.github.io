@@ -1,5 +1,6 @@
 import { Component } from "react";
 import M from "materialize-css";
+import Loading from "../../components/Loading";
 import Project from "../../components/Project";
 import API from "../../utils/API";
 import "./Portfolio.css";
@@ -11,15 +12,15 @@ const clickMeSeconds = 5; // Number of seconds the intial help message is shown
 const errorCard = {
     title: "Error",
     description: "Could not get project list",
-    langs: [],
-    loading: true
+    langs: []
 };
 
 export default class Portfolio extends Component {
     state = {
         shown: initialProjects,
         projects: [],
-        langImages: {}
+        langImages: {},
+        loading: true
     }
 
     componentDidMount() {
@@ -86,6 +87,7 @@ export default class Portfolio extends Component {
             <section className="row">
                 <div className="col s12 m8 offset-m2">
                     <ul id="portfolio-list">
+                        {this.state.loading ? <Loading /> : undefined}
                         {this.state.projects
                             .slice(0, this.state.shown)
                             .map(project => <Project key={project.title} {...project} langImages={this.state.langImages} />)
