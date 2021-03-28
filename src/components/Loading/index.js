@@ -1,6 +1,6 @@
 import "./Loading.css";
 
-export default function Loading({ size, className }) {
+export default function Loading({ size, className = "" }) {
     return (
         <div className={`loading-${size} ${className}`}>
             <div className={`preloader-wrapper ${size} active`}>
