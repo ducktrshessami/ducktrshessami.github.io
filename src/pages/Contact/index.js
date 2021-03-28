@@ -1,7 +1,16 @@
 import M from "materialize-css";
+import API from "../../utils/API";
 import "./Contact.css";
 
 const postToastDuration = 3;
+
+function toastMessage(text) {
+    return {
+        html: `<h5 class='hide-on-small-only'>${text}</h5>`,
+        classes: "blue-grey darken-2 text-white",
+        displayLength: postToastDuration * 1000
+    };
+}
 
 function getValues({ name, email, message }) {
     return {
@@ -15,22 +24,22 @@ function validate({ name, email, message }) {
     return name && /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(email) && message;
 }
 
-function clear() {
-    document.getElementById("name").value = "";
-    document.getElementById("email").value = "";
-    document.getElementById("message").value = "";
-}
-
 function submit(event) {
-    let values = getValues(document.getElementById("contact-form"));
+    let form = document.getElementById("contact-form");
+    let values = getValues(form);
     event.preventDefault();
     if (validate(values)) {
-        clear();
-        M.toast({
-            html: "<h5 class='hide-on-small-only'>Message posted!</h5>",
-            classes: "blue-grey darken-2 text-white",
-            displayLength: postToastDuration * 1000
-        });
+        API.sendMessage(values)
+            .then(res => {
+                if (res.ok) {
+                    form.reset();
+                    M.toast(toastMessage("Message posted!"));
+                }
+                else {
+                    M.toast(toastMessage("Could not post message"));
+                }
+            })
+            .catch(console.error);
     }
 }
 
@@ -58,7 +67,7 @@ export default function Contact() {
                                 <textarea name="message" id="message" className="materialize-textarea validate white-text"></textarea>
                                 <label htmlFor="message">Message</label>
                             </div>
-                            <button type="submit" form="contact-form" id="submit" className="btn waves-effect waves-dark black-text" onClick={submit}>Submit</button>
+                            <button type="submit" form="contact-form" id="submit" className="btn waves-effect waves-dark black-text submit-button" onClick={submit}>Submit</button>
                         </form>
                     </div>
                 </div>

@@ -1,8 +1,3 @@
-#submit {
-    background-color: #7dff87!important;
-    margin-top: 0.5rem;
-}
-
 .input-field :focus + label {
     color: #989898!important;
 }

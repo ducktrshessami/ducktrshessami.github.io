@@ -10,7 +10,7 @@ function parseDescription(description) {
     return elems;
 }
 
-export default function Project({ title, description, langs, url }) {
+export default function Project({ title, description, langs, url, langImages }) {
     return (
         <li className="portfolio-item">
             <a href={url} className="project-card card blue-grey darken-4 white-text waves-effect waves-dark">
@@ -21,7 +21,10 @@ export default function Project({ title, description, langs, url }) {
                     {parseDescription(description)}
                     <hr />
                     <ul className="project-langs">
-                        {langs.map(lang => <Lang key={lang.trim()} lang={lang.trim()} />)}
+                        {langs.map(lang => {
+                            let trimmed = lang.trim();
+                            return <Lang key={trimmed} lang={trimmed} url={langImages[trimmed]} />
+                        })}
                     </ul>
                 </div>
             </a>

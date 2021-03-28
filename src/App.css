@@ -30,3 +30,8 @@ main {
 main a {
     color: #76adff;
 }
+
+.submit-button {
+    background-color: #7dff87!important;
+    margin-top: 0.5rem;
+}
