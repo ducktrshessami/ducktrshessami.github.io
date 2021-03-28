@@ -4,6 +4,14 @@ import "./Contact.css";
 
 const postToastDuration = 3;
 
+function toastMessage(text) {
+    return {
+        html: `<h5 class='hide-on-small-only'>${text}</h5>`,
+        classes: "blue-grey darken-2 text-white",
+        displayLength: postToastDuration * 1000
+    };
+}
+
 function getValues({ name, email, message }) {
     return {
         name: name.value,
@@ -22,13 +30,14 @@ function submit(event) {
     event.preventDefault();
     if (validate(values)) {
         API.sendMessage(values)
-            .then(() => {
-                form.reset();
-                M.toast({
-                    html: "<h5 class='hide-on-small-only'>Message posted!</h5>",
-                    classes: "blue-grey darken-2 text-white",
-                    displayLength: postToastDuration * 1000
-                });
+            .then(res => {
+                if (res.ok) {
+                    form.reset();
+                    M.toast(toastMessage("Message posted!"));
+                }
+                else {
+                    M.toast(toastMessage("Could not post message"));
+                }
             })
             .catch(console.error);
     }
