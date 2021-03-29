@@ -1,8 +1,8 @@
-import "./Index.css";
+import "./About.css";
 
 const birthday = new Date("7/9/1998");
 
-export default function Index() {
+export default function About() {
     let now = new Date();
     let age = now.getFullYear() - birthday.getFullYear() - (birthday.getMonth() < now.getMonth() || (birthday.getMonth() === now.getMonth() && birthday.getDate() <= now.getDate()) ? 0 : 1);
     let logoUrl = process.env.PUBLIC_URL + "/logo512.png";
