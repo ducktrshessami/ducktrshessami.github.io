@@ -16,7 +16,7 @@ jobs:
     - name: install dependencies
       run: npm i --only=prod
 
-    - name: build react app
+    - name: build app
       run: npm run build
 
     - name: deploy
