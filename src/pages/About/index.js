@@ -1,12 +1,8 @@
+import Bio from "../../components/Bio";
 import "./About.css";
 
-const birthday = new Date("7/9/1998");
-
 export default function About() {
-    let now = new Date();
-    let age = now.getFullYear() - birthday.getFullYear() - (birthday.getMonth() < now.getMonth() || (birthday.getMonth() === now.getMonth() && birthday.getDate() <= now.getDate()) ? 0 : 1);
     let logoUrl = process.env.PUBLIC_URL + "/logo512.png";
-
     return (
         <article className="row">
             <div className="col s12 m8 offset-m2 white-text">
@@ -17,14 +13,7 @@ export default function About() {
                             <h1 className="card-title">About Me</h1>
                             <hr />
                             <br />
-                            <p>Josh Wee (He/Him)</p>
-                            <p>Age: {age}</p>
-                            <br />
-                            <p>I'm a self-taught computer programmer with a background in Javascript and C++. I mostly do back-end projects related to bots and automation, but occasionally I take requests for other projects.</p>
-                            <br />
-                            <p>I am also a full-stack web developer who has worked with React, MySql, and MongoDB.</p>
-                            <br />
-                            <p>Other than a programmer, I am a pianist, fledgling writer, and image editor.</p>
+                            <Bio />
                         </div>
                         <ul className="card-content">
                             <li><a href="https://github.com/ducktrshessami">GitHub</a></li>
@@ -38,14 +27,7 @@ export default function About() {
                 <div className="card blue-grey darken-4 hide-on-med-and-up">
                     <img src={logoUrl} alt="Logo" className="card-image vertical-image" />
                     <div className="card-content">
-                        <p>Josh Wee (He/Him)</p>
-                        <p>Age: {age}</p>
-                        <br />
-                        <p>I'm a self-taught computer programmer with a background in Javascript and C++. I mostly do back-end projects related to bots and automation, but occasionally I take requests for other projects.</p>
-                        <br />
-                        <p>I am also a full-stack web developer who has worked with React, MySql, and MongoDB.</p>
-                        <br />
-                        <p>Other than a programmer, I am a pianist, fledgling writer, and image editor.</p>
+                        <Bio />
                     </div>
                     <ul className="card-content">
                         <li><a href="https://github.com/ducktrshessami">GitHub</a></li>
