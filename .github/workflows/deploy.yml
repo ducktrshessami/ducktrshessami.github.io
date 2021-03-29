@@ -24,3 +24,4 @@ jobs:
       with:
         branch: gh-pages
         folder: build
+        commit-message: Deploy from $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/commit/$GITHUB_SHA
