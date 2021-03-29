@@ -1,9 +1,17 @@
+import { useState } from "react";
 import Bio from "../../components/Bio";
 import Socials from "../../components/Socials";
+import API from "../../utils/API";
 import "./About.css";
 
 export default function About() {
+    const [bioText, setBioText] = useState("");
     let logoUrl = process.env.PUBLIC_URL + "/logo512.png";
+
+    API.getBio()
+        .then(setBioText)
+        .catch(console.error);
+
     return (
         <article className="row">
             <div className="col s12 m8 offset-m2 white-text">
@@ -14,7 +22,7 @@ export default function About() {
                             <h1 className="card-title">About Me</h1>
                             <hr />
                             <br />
-                            <Bio />
+                            <Bio text={bioText} />
                         </div>
                         <Socials />
                     </div>
@@ -22,7 +30,7 @@ export default function About() {
                 <div className="card blue-grey darken-4 hide-on-med-and-up">
                     <img src={logoUrl} alt="Logo" className="card-image vertical-image" />
                     <div className="card-content">
-                        <Bio />
+                        <Bio text={bioText} />
                     </div>
                     <Socials />
                 </div>
