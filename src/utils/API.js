@@ -8,10 +8,6 @@ const API = {
             headers: { "Content-Type": "application/json" }
         });
     },
-    getBio: function () {
-        return fetch(URL + "/bio")
-            .then(res => res.text());
-    },
     getLangs: function () {
         return fetch(URL + "/langs")
             .then(res => res.json());
