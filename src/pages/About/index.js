@@ -1,7 +1,7 @@
 import { Component } from "react";
 import Bio from "../../components/Bio";
 import Socials from "../../components/Socials";
-import bioFile from "../../bio";
+import bioFile from "../../bio.txt";
 import "./About.css";
 
 export default class About extends Component {
