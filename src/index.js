@@ -1,7 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
-import API from "./utils/API";
 // import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
@@ -10,9 +9,6 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById('root')
 );
-
-// Ping the Heroku deployment of the API to shorten the initial load time
-API.ping();
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
