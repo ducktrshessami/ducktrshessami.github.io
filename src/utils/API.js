@@ -15,9 +15,6 @@ const API = {
     getProjects: function () {
         return fetch(URL + "/projects")
             .then(res => res.json());
-    },
-    ping: function () {
-        return fetch(URL + "/ping");
     }
 };
 
