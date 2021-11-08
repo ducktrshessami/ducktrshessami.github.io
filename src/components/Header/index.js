@@ -1,4 +1,4 @@
-import { Link, Switch, Route } from "react-router-dom";
+import { Link, Routes, Route } from "react-router-dom";
 import Sidenav from "./Sidenav";
 
 import "./Header.css";
@@ -16,11 +16,11 @@ export default function Header({ route }) {
                     <li><Link {...(route === "/contact" ? { className: "active" } : undefined)} to="/contact">Contact</Link></li>
                 </ul>
                 <span className="brand-logo center hide-on-med-and-up">
-                    <Switch>
+                    <Routes>
                         <Route path="/portfolio">Portfolio</Route>
                         <Route path="/contact">Contact</Route>
                         <Route path="/">About Me</Route>
-                    </Switch>
+                    </Routes>
                 </span>
                 <div role="button" data-target="sidenav" className="sidenav-trigger right hide-on-med-and-up"><i className="material-icons">menu</i></div>
             </nav>

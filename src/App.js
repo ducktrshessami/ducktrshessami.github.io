@@ -1,7 +1,7 @@
 import {
   HashRouter as Router,
-  Route,
-  Switch
+  Routes,
+  Route
 } from "react-router-dom";
 
 import About from "./pages/About";
@@ -17,29 +17,17 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Switch>
-          <Route path="/portfolio">
-            <Header route="/portfolio" />
-          </Route>
-          <Route path="/contact">
-            <Header route="/contact" />
-          </Route>
-          <Route path="/">
-            <Header route="/" />
-          </Route>
-        </Switch>
+        <Routes>
+          <Route path="/portfolio" element={<Header route="/portfolio" />} />
+          <Route path="/contact" element={<Header route="/contact" />} />
+          <Route path="/" element={<Header route="/" />} />
+        </Routes>
         <main>
-          <Switch>
-            <Route path="/portfolio">
-              <Portfolio />
-            </Route>
-            <Route path="/contact">
-              <Contact />
-            </Route>
-            <Route path="/">
-              <About />
-            </Route>
-          </Switch>
+          <Routes>
+            <Route path="/portfolio" element={<Portfolio />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/" element={<About />} />
+          </Routes>
         </main>
         <Footer />
       </div>
