@@ -52,7 +52,8 @@ export default class Portfolio extends Component {
                 console.error(err);
                 this.setState({
                     shown: 1,
-                    projects: [errorCard]
+                    projects: [errorCard],
+                    loading: false
                 });
             });
     }

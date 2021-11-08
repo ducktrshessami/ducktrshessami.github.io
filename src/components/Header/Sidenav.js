@@ -1,6 +1,6 @@
-import { Component } from "react";
+import React, { Component } from "react";
 import {
-    Switch,
+    Routes,
     Route,
     Link
 } from "react-router-dom";
@@ -23,23 +23,16 @@ export default class Sidenav extends Component {
     render() {
         return (
             <ul id="sidenav" className="sidenav">
-                <Switch>
-                    <Route path="/portfolio">
+                <Routes>
+                    <Route path="/portfolio" element={<React.Fragment>
                         <li><Link to="/" onClick={() => this.clicked()}>About Me</Link></li>
                         <li><span className="disabled">Portfolio</span></li>
-                        <li><Link to="/contact" onClick={() => this.clicked()}>Contact</Link></li>
-                    </Route>
-                    <Route path="/contact">
-                        <li><Link to="/" onClick={() => this.clicked()}>About Me</Link></li>
-                        <li><Link to="/portfolio" onClick={() => this.clicked()}>Portfolio</Link></li>
-                        <li><span className="disabled">Contact</span></li>
-                    </Route>
-                    <Route path="/">
+                    </React.Fragment>} />
+                    <Route path="/" element={<React.Fragment>
                         <li><span className="disabled">About Me</span></li>
                         <li><Link to="/portfolio" onClick={() => this.clicked()}>Portfolio</Link></li>
-                        <li><Link to="/contact" onClick={() => this.clicked()}>Contact</Link></li>
-                    </Route>
-                </Switch>
+                    </React.Fragment>} />
+                </Routes>
             </ul>
         );
     }

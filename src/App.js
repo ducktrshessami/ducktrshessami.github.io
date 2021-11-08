@@ -1,12 +1,12 @@
 import {
   HashRouter as Router,
+  Routes,
   Route,
-  Switch
+  Navigate
 } from "react-router-dom";
 
 import About from "./pages/About";
 import Portfolio from "./pages/Portfolio";
-import Contact from "./pages/Contact";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
@@ -17,29 +17,13 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Switch>
-          <Route path="/portfolio">
-            <Header route="/portfolio" />
-          </Route>
-          <Route path="/contact">
-            <Header route="/contact" />
-          </Route>
-          <Route path="/">
-            <Header route="/" />
-          </Route>
-        </Switch>
+        <Header />
         <main>
-          <Switch>
-            <Route path="/portfolio">
-              <Portfolio />
-            </Route>
-            <Route path="/contact">
-              <Contact />
-            </Route>
-            <Route path="/">
-              <About />
-            </Route>
-          </Switch>
+          <Routes>
+            <Route path="/portfolio" element={<Portfolio />} />
+            <Route path="/" element={<About />} />
+            <Route path="/*" element={<Navigate to="/" />} />
+          </Routes>
         </main>
         <Footer />
       </div>
