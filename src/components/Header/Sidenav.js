@@ -27,17 +27,10 @@ export default class Sidenav extends Component {
                     <Route path="/portfolio" element={<React.Fragment>
                         <li><Link to="/" onClick={() => this.clicked()}>About Me</Link></li>
                         <li><span className="disabled">Portfolio</span></li>
-                        <li><Link to="/contact" onClick={() => this.clicked()}>Contact</Link></li>
-                    </React.Fragment>} />
-                    <Route path="/contact" element={<React.Fragment>
-                        <li><Link to="/" onClick={() => this.clicked()}>About Me</Link></li>
-                        <li><Link to="/portfolio" onClick={() => this.clicked()}>Portfolio</Link></li>
-                        <li><span className="disabled">Contact</span></li>
                     </React.Fragment>} />
                     <Route path="/" element={<React.Fragment>
                         <li><span className="disabled">About Me</span></li>
                         <li><Link to="/portfolio" onClick={() => this.clicked()}>Portfolio</Link></li>
-                        <li><Link to="/contact" onClick={() => this.clicked()}>Contact</Link></li>
                     </React.Fragment>} />
                 </Routes>
             </ul>

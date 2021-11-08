@@ -13,12 +13,10 @@ export default function Header({ route }) {
                 </Link>
                 <ul className="left hide-on-small-only">
                     <li><Link {...(route === "/portfolio" ? { className: "active" } : undefined)} to="/portfolio">Portfolio</Link></li>
-                    <li><Link {...(route === "/contact" ? { className: "active" } : undefined)} to="/contact">Contact</Link></li>
                 </ul>
                 <span className="brand-logo center hide-on-med-and-up">
                     <Routes>
                         <Route path="/portfolio">Portfolio</Route>
-                        <Route path="/contact">Contact</Route>
                         <Route path="/">About Me</Route>
                     </Routes>
                 </span>
