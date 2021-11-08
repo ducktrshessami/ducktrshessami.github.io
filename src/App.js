@@ -1,7 +1,8 @@
 import {
   HashRouter as Router,
   Routes,
-  Route
+  Route,
+  Navigate
 } from "react-router-dom";
 
 import About from "./pages/About";
@@ -16,14 +17,12 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Routes>
-          <Route path="/portfolio" element={<Header route="/portfolio" />} />
-          <Route path="/" element={<Header route="/" />} />
-        </Routes>
+        <Header />
         <main>
           <Routes>
             <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/" element={<About />} />
+            <Route path="/*" element={<Navigate to="/" />} />
           </Routes>
         </main>
         <Footer />
