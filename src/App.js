@@ -22,7 +22,7 @@ function App() {
           <Routes>
             <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/" element={<About />} />
-            <Route path="/*" element={<Navigate to="/" />} />
+            <Route path="/*" element={<Navigate to="/" replace={true} />} />
           </Routes>
         </main>
         <Footer />
