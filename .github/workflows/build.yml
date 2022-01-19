@@ -1,7 +1,7 @@
 # Build and deploy to GitHub Pages
 # https://github.com/JamesIves/github-pages-deploy-action
 
-name: gh-pages deployment
+name: gh-pages build
 
 on:
   push:
