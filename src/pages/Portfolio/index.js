@@ -1,6 +1,5 @@
 import { Component } from "react";
 import M from "materialize-css";
-import Loading from "../../components/Loading";
 import Project from "../../components/Project";
 import projectList from "../../projects.json";
 import projectLangs from "../../langs.json";
@@ -17,10 +16,7 @@ const errorCard = {
 };
 
 export default class Portfolio extends Component {
-    state = {
-        shown: initialProjects,
-        loading: true
-    }
+    state = { shown: initialProjects }
 
     componentDidMount() {
         if (!localStorage.getItem("portfolioReturningUser")) {
@@ -60,7 +56,6 @@ export default class Portfolio extends Component {
             <section className="row">
                 <div className="col s12 m8 offset-m2">
                     <ul id="portfolio-list">
-                        {this.state.loading ? <Loading size="big" /> : undefined}
                         {projectList
                             .slice(0, this.state.shown)
                             .map(project => <Project key={project.title} {...project} langImages={projectLangs} />)
