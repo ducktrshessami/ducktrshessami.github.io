@@ -9,12 +9,6 @@ const initialProjects = 6; // Number of projects displayed initially
 const projectIncrement = 6; // Project display increase per button press
 const clickMeSeconds = 5; // Number of seconds the intial help message is shown
 
-const errorCard = {
-    title: "Error",
-    description: "Could not get project list",
-    langs: []
-};
-
 export default class Portfolio extends Component {
     state = { shown: initialProjects }
 
