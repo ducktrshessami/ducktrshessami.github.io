@@ -2,7 +2,6 @@ import { Component } from "react";
 import M from "materialize-css";
 import Loading from "../../components/Loading";
 import Project from "../../components/Project";
-import API from "../../utils/API";
 import "./Portfolio.css";
 
 const initialProjects = 6; // Number of projects displayed initially
@@ -35,27 +34,6 @@ export default class Portfolio extends Component {
                 displayLength: clickMeSeconds * 1000
             });
         }
-        API.getLangs()
-            .then(langs => this.setState({
-                ...this.state,
-                langImages: langs
-            }))
-            .catch(console.error);
-        API.getProjects()
-            .then(projects => this.setState({
-                ...this.state,
-                shown: this.state.shown,
-                projects: projects,
-                loading: false
-            }))
-            .catch(err => {
-                console.error(err);
-                this.setState({
-                    shown: 1,
-                    projects: [errorCard],
-                    loading: false
-                });
-            });
     }
 
     showMore() {
