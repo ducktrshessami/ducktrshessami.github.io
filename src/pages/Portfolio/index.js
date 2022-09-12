@@ -1,27 +1,16 @@
 import { Component } from "react";
 import M from "materialize-css";
-import Loading from "../../components/Loading";
 import Project from "../../components/Project";
-import API from "../../utils/API";
+import projectList from "../../projects.json";
+import projectLangs from "../../langs.json";
 import "./Portfolio.css";
 
 const initialProjects = 6; // Number of projects displayed initially
 const projectIncrement = 6; // Project display increase per button press
 const clickMeSeconds = 5; // Number of seconds the intial help message is shown
 
-const errorCard = {
-    title: "Error",
-    description: "Could not get project list",
-    langs: []
-};
-
 export default class Portfolio extends Component {
-    state = {
-        shown: initialProjects,
-        projects: [],
-        langImages: {},
-        loading: true
-    }
+    state = { shown: initialProjects }
 
     componentDidMount() {
         if (!localStorage.getItem("portfolioReturningUser")) {
@@ -35,45 +24,18 @@ export default class Portfolio extends Component {
                 displayLength: clickMeSeconds * 1000
             });
         }
-        API.getLangs()
-            .then(langs => this.setState({
-                ...this.state,
-                langImages: langs
-            }))
-            .catch(console.error);
-        API.getProjects()
-            .then(projects => this.setState({
-                ...this.state,
-                shown: this.state.shown,
-                projects: projects,
-                loading: false
-            }))
-            .catch(err => {
-                console.error(err);
-                this.setState({
-                    shown: 1,
-                    projects: [errorCard],
-                    loading: false
-                });
-            });
     }
 
     showMore() {
-        this.setState({
-            shown: this.state.shown + projectIncrement,
-            projects: this.state.projects
-        });
+        this.setState({ shown: this.state.shown + projectIncrement });
     }
 
     showAll() {
-        this.setState({
-            shown: this.state.projects.length,
-            projects: this.state.projects
-        });
+        this.setState({ shown: projectList.length });
     }
 
     buttons() {
-        if (this.state.shown < this.state.projects.length) {
+        if (this.state.shown < projectList.length) {
             return (
                 <div className="center">
                     <button id="more-button" className="portfolio-button btn-large black-text" onClick={() => this.showMore()}>Show More</button>
@@ -84,16 +46,13 @@ export default class Portfolio extends Component {
     }
 
     render() {
+        const portfolioList = projectList
+            .slice(0, this.state.shown)
+            .map(project => <Project key={project.title} {...project} langImages={projectLangs} />);
         return (
             <section className="row">
                 <div className="col s12 m8 offset-m2">
-                    <ul id="portfolio-list">
-                        {this.state.loading ? <Loading size="big" /> : undefined}
-                        {this.state.projects
-                            .slice(0, this.state.shown)
-                            .map(project => <Project key={project.title} {...project} langImages={this.state.langImages} />)
-                        }
-                    </ul>
+                    <ul id="portfolio-list">{portfolioList}</ul>
                     {this.buttons()}
                 </div>
             </section>
