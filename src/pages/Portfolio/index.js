@@ -2,6 +2,8 @@ import { Component } from "react";
 import M from "materialize-css";
 import Loading from "../../components/Loading";
 import Project from "../../components/Project";
+import projectList from "../../projects.json";
+import projectLangs from "../../langs.json";
 import "./Portfolio.css";
 
 const initialProjects = 6; // Number of projects displayed initially
@@ -17,8 +19,6 @@ const errorCard = {
 export default class Portfolio extends Component {
     state = {
         shown: initialProjects,
-        projects: [],
-        langImages: {},
         loading: true
     }
 
@@ -37,21 +37,15 @@ export default class Portfolio extends Component {
     }
 
     showMore() {
-        this.setState({
-            shown: this.state.shown + projectIncrement,
-            projects: this.state.projects
-        });
+        this.setState({ shown: this.state.shown + projectIncrement });
     }
 
     showAll() {
-        this.setState({
-            shown: this.state.projects.length,
-            projects: this.state.projects
-        });
+        this.setState({ shown: projectList.length });
     }
 
     buttons() {
-        if (this.state.shown < this.state.projects.length) {
+        if (this.state.shown < projectList.length) {
             return (
                 <div className="center">
                     <button id="more-button" className="portfolio-button btn-large black-text" onClick={() => this.showMore()}>Show More</button>
@@ -67,9 +61,9 @@ export default class Portfolio extends Component {
                 <div className="col s12 m8 offset-m2">
                     <ul id="portfolio-list">
                         {this.state.loading ? <Loading size="big" /> : undefined}
-                        {this.state.projects
+                        {projectList
                             .slice(0, this.state.shown)
-                            .map(project => <Project key={project.title} {...project} langImages={this.state.langImages} />)
+                            .map(project => <Project key={project.title} {...project} langImages={projectLangs} />)
                         }
                     </ul>
                     {this.buttons()}
