@@ -46,15 +46,13 @@ export default class Portfolio extends Component {
     }
 
     render() {
+        const portfolioList = projectList
+            .slice(0, this.state.shown)
+            .map(project => <Project key={project.title} {...project} langImages={projectLangs} />);
         return (
             <section className="row">
                 <div className="col s12 m8 offset-m2">
-                    <ul id="portfolio-list">
-                        {projectList
-                            .slice(0, this.state.shown)
-                            .map(project => <Project key={project.title} {...project} langImages={projectLangs} />)
-                        }
-                    </ul>
+                    <ul id="portfolio-list">{portfolioList}</ul>
                     {this.buttons()}
                 </div>
             </section>
