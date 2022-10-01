@@ -11,18 +11,6 @@
         "url": "https://github.com/ducktrshessami/ducktrshessami.github.io"
     },
     {
-        "title": "kennybot",
-        "description": "A music/dice bot for Discord\nSupports multiple playlists\nOriginally made for personal use in online Dungeons & Dragons",
-        "url": "https://github.com/ducktrshessami/kennybot",
-        "langs": [
-            "js",
-            "psql",
-            "react",
-            "html",
-            "css"
-        ]
-    },
-    {
         "title": "buttsbot",
         "description": "A Discord bot based on the Twitch bot of the same name\nA fun bot that occasionally replaces a few syllables in a message with the word 'butt'\nVerified on Discord!",
         "langs": [
