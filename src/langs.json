@@ -8,5 +8,6 @@
     "react": "https://img.shields.io/badge/React-%2320232a.svg?&style=flat-square&logo=react&logoColor=%2361DAFB",
     "psql": "https://img.shields.io/badge/PostgreSQL-%23336791.svg?&style=flat-square&logo=postgresql&logoColor=white",
     "ts": "https://img.shields.io/badge/TypeScript-007ACC?&style=flat-square&logo=typescript&logoColor=white",
-    "oracle": "https://img.shields.io/badge/Oracle-F80000?&style=flat-square&logo=Oracle&logoColor=white"
+    "oracle": "https://img.shields.io/badge/Oracle-F80000?&style=flat-square&logo=Oracle&logoColor=white",
+    "sqlite": "https://img.shields.io/badge/sqlite-07405E.svg?style=flat-square&logo=sqlite&logoColor=white"
 }
