@@ -30,3 +30,7 @@ main {
 main a {
     color: #76adff;
 }
+
+p {
+    line-height: 1.5rem;
+}
