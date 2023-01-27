@@ -23,6 +23,7 @@
         "title": "scdl-core",
         "description": "A lightweight SoundCloud downloading module for Node.js",
         "langs": [
+            "ts",
             "js"
         ],
         "url": "https://github.com/ducktrshessami/scdl-core"
