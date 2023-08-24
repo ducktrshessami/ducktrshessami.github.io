@@ -11,13 +11,14 @@
         "url": "https://github.com/ducktrshessami/ducktrshessami.github.io"
     },
     {
-        "title": "buttsbot",
+        "title": "discord-buttsbot",
         "description": "A Discord bot based on the Twitch bot of the same name\nA fun bot that occasionally replaces a few syllables in a message with the word 'butt'\nVerified on Discord!",
         "langs": [
+            "ts",
             "js",
             "sqlite"
         ],
-        "url": "https://github.com/ducktrshessami/buttsbot"
+        "url": "https://github.com/ducktrshessami/discord-buttsbot"
     },
     {
         "title": "scdl-core",
@@ -35,6 +36,16 @@
             "js"
         ],
         "url": "https://github.com/ducktrshessami/scdl"
+    },
+    {
+        "title": "discord-haikusbot",
+        "description": "A Discord bot based on the Reddit bot of the same name\nA bot that detects messages that can be formatted into haiku/senryu format",
+        "langs": [
+            "ts",
+            "js",
+            "sqlite"
+        ],
+        "url": "https://github.com/ducktrshessami/discord-haikusbot"
     },
     {
         "title": "nessie",
