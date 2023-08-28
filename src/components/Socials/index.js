@@ -6,7 +6,7 @@ export default function Socials() {
             <li><a href="https://github.com/ducktrshessami">GitHub</a></li>
             <li><a href="https://www.linkedin.com/in/josh-wee-b90455106/">LinkedIn</a></li>
             <li>Email: <a href="mailto:jwee761@gmail.com">jwee761@gmail.com</a></li>
-            <li>Discord: ducktrshessami#4884</li>
+            <li>Discord: ducktrshessami</li>
         </ul>
     );
 };
