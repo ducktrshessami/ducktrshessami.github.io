@@ -15,7 +15,7 @@ export default function Bio({ text = "" }) {
     let age = now.getFullYear() - birthday.getFullYear() - (birthday.getMonth() < now.getMonth() || (birthday.getMonth() === now.getMonth() && birthday.getDate() <= now.getDate()) ? 0 : 1);
     return (
         <article>
-            <p>Josh Wee (He/Him)</p>
+            <p>Josh Wee</p>
             <p>Age: {age}</p>
             {parseText(text)}
         </article>
