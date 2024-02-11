@@ -10,12 +10,9 @@ export function Portfolio() {
       <header className="flex h-14 items-center justify-between px-4 md:px-6">
         <a className="flex items-center gap-2" href="#">
           <MountainIcon className="h-6 w-6" />
-          <span className="sr-only">Acme Inc</span>
+          <span className="sr-only">ducktrshessami</span>
         </a>
         <nav className="hidden md:flex gap-4">
-          <a className="text-sm font-medium hover:underline underline-offset-4" href="#">
-            Work
-          </a>
           <a className="text-sm font-medium hover:underline underline-offset-4" href="#">
             About
           </a>
@@ -30,10 +27,10 @@ export function Portfolio() {
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
-                  John Doe
+                  Josh Wee
                 </h1>
                 <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                  Designer. Developer. Creator.
+                  a.k.a. ducktrshessami
                 </p>
               </div>
               <div className="space-x-4">
@@ -48,13 +45,8 @@ export function Portfolio() {
           </div>
         </section>
         <section className="w-full py-12 md:py-24 lg:py-32">
-          <div className="container grid items-center justify-center gap-4 px-4 text-center md:px-6 lg:gap-10">
-            <div className="space-y-3">
-              <h2 className="text-3xl font-bold tracking-tighter md:text-4xl">Projects</h2>
-              <p className="max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                A selection of my latest work.
-              </p>
-            </div>
+          <div className="container grid items-center justify-center gap-4 px-4 text-center md:px-6 lg:gap-10 space-y-5">
+            <h2 className="text-3xl font-bold tracking-tighter md:text-4xl">Projects</h2>
             <div className="grid w-full grid-cols-2 lg:grid-cols-3 items-start gap-8 lg:gap-12">
               <Card>
                 <CardContent className="flex flex-col space-y-4">
@@ -106,12 +98,13 @@ export function Portfolio() {
         </section>
         <section className="w-full py-12 md:py-24 lg:py-32 border-t">
           <div className="container px-4 md:px-6">
-            <div className="flex flex-col items-center space-y-4 text-center">
-              <div className="space-y-2">
+            <div className="flex flex-col items-center space-y-6 text-center">
+              <div className="space-y-4">
                 <h2 className="text-3xl font-bold tracking-tighter md:text-4xl">About Me</h2>
-                <p className="max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                  A short bio about me.
-                </p>
+                <div className="max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400 space-y-3">
+                  <p>I just like doing things</p>
+                  <p>I'm most comfortable with JavaScript/TypeScript but have past experience with C++, Kotlin, Java, and Python. I've also used React and a few SQL databases as a full-stack web developer.</p>
+                </div>
               </div>
               <div className="space-x-4">
                 <a
@@ -125,16 +118,8 @@ export function Portfolio() {
           </div>
         </section>
       </main>
-      <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
-        <div className="mx-auto flex gap-4 sm:gap-6">
-          <a className="text-xs hover:underline underline-offset-4" href="#">
-            Terms of Service
-          </a>
-          <a className="text-xs hover:underline underline-offset-4" href="#">
-            Privacy
-          </a>
-        </div>
-        <p className="text-xs text-gray-500 dark:text-gray-400">© 2024 Acme Inc. All rights reserved.</p>
+      <footer className="py-6 w-full px-4 md:px-6 border-t">
+        <p className="text-right text-xs text-gray-500 dark:text-gray-400">© Copyright 2024 ducktrshessami</p>
       </footer>
     </div>
   );
