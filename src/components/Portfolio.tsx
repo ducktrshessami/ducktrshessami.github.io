@@ -4,6 +4,7 @@
  */
 import { ReactNode } from "react";
 import { PortfolioCard } from "./Card";
+import { Icon } from "./Icon";
 
 export function Portfolio() {
   // TODO: actual project loading
@@ -21,7 +22,7 @@ export function Portfolio() {
     <div className="flex flex-col min-h-screen">
       <header className="flex h-14 items-center justify-between px-4 md:px-6">
         <a className="flex items-center gap-2" href="#">
-          <MountainIcon className="h-6 w-6" />
+          <Icon className="h-6 w-6" />
           <span className="sr-only">ducktrshessami</span>
         </a>
         <nav className="hidden md:flex gap-4">
@@ -90,28 +91,5 @@ export function Portfolio() {
         <p className="text-right text-xs text-gray-500 dark:text-gray-400">© Copyright 2024 ducktrshessami</p>
       </footer>
     </div>
-  );
-}
-
-interface IconProps {
-  className: string;
-}
-
-function MountainIcon(props: IconProps) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="m8 3 4 8 5-5 5 15H2L8 3z" />
-    </svg>
   );
 }
