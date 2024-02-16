@@ -1,3 +1,0 @@
-I'm a computer programmer with a background in Javascript and C++.
-I'm mostly interested in bots, automation, and neural nets, but I also have experience with React, MySql, MongoDB, and PostgreSQL as a full-stack web developer.
-Some other languages I've used include Kotlin, Java, and Python.
